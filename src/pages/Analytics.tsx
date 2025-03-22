@@ -1,9 +1,27 @@
-
 import React, { useState } from 'react';
 import { PageTransition } from '@/components/layout/PageTransition';
 import { Widget } from '@/components/dashboard/Widget';
 import { performanceData, financialData } from '@/utils/mockData';
-import { AreaChart, BarChart, PieChart, LineChart, ResponsiveContainer, XAxis, YAxis, CartesianGrid, Tooltip, Area, Bar, Pie, Line, Cell, Legend, ComposedChart, Scatter } from 'recharts';
+import { 
+  AreaChart, 
+  BarChart, 
+  PieChart, 
+  LineChart, 
+  ResponsiveContainer, 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  Area, 
+  Bar, 
+  Pie, 
+  Line, 
+  Cell, 
+  Legend, 
+  ComposedChart, 
+  Scatter,
+  ScatterChart
+} from 'recharts';
 import { Calendar, Filter, Download, RotateCcw, ChevronDown } from 'lucide-react';
 
 const timeRanges = ['This Week', 'This Month', 'This Quarter', 'This Year', 'All Time'];
