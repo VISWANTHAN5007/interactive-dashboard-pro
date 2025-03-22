@@ -8,6 +8,10 @@ import { Layout } from "@/components/layout/Layout";
 import Index from "@/pages/Index";
 import Dashboard from "@/pages/Dashboard";
 import Analytics from "@/pages/Analytics";
+import Calendar from "@/pages/Calendar";
+import Widgets from "@/pages/Widgets";
+import Team from "@/pages/Team";
+import Settings from "@/pages/Settings";
 import Assistant from "@/pages/Assistant";
 import NotFound from "@/pages/NotFound";
 
@@ -24,6 +28,10 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/widgets" element={<Widgets />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="/assistant" element={<Assistant />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           </Route>

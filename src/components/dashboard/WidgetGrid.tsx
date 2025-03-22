@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Widget } from './Widget';
+import { motion } from 'framer-motion';
 
 interface WidgetGridProps {
   children: React.ReactNode;
@@ -18,9 +18,14 @@ export function WidgetGrid({ children }: WidgetGridProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       {React.Children.map(children, (child, index) => (
-        <div key={index} className="animate-scale-in" style={{ animationDelay: `${index * 50}ms` }}>
+        <motion.div 
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+        >
           {child}
-        </div>
+        </motion.div>
       ))}
     </div>
   );

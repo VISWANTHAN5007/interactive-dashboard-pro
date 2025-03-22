@@ -5,9 +5,12 @@ import { Sidebar } from './Sidebar';
 import { Outlet } from 'react-router-dom';
 import { AssistantButton } from '@/components/assistant/AssistantButton';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 export function Layout() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     // Add a slight delay to make the animation more noticeable
@@ -18,11 +21,18 @@ export function Layout() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Close sidebar when changing from mobile to desktop
+  useEffect(() => {
+    if (!isMobile) {
+      setIsSidebarOpen(false);
+    }
+  }, [isMobile]);
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <Navbar />
+      <Navbar onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
       <div className="flex flex-1">
-        <Sidebar />
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         <AnimatePresence>
           {isLoaded && (
             <motion.main 

@@ -1,6 +1,8 @@
 
 import React, { useState } from 'react';
 import { MoreHorizontal, Maximize2, Minimize2 } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface WidgetProps {
   title: string;
@@ -11,13 +13,18 @@ interface WidgetProps {
 
 export function Widget({ title, children, className = '', id }: WidgetProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const isMobile = useIsMobile();
   
   return (
-    <div 
+    <motion.div 
       id={id}
       className={`widget card-hover transition-all duration-300 ease-in-out ${
         isExpanded ? 'fixed inset-4 z-50 overflow-auto' : 'relative'
       } ${className}`}
+      layout
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
     >
       <div className="widget-header">
         <h3 className="text-sm font-medium">{title}</h3>
@@ -38,6 +45,14 @@ export function Widget({ title, children, className = '', id }: WidgetProps) {
       <div className="widget-body">
         {children}
       </div>
-    </div>
+      
+      {/* Overlay for expanded state */}
+      {isExpanded && (
+        <div 
+          className="fixed inset-0 bg-background/50 backdrop-blur-sm z-[-1]"
+          onClick={() => setIsExpanded(false)}
+        />
+      )}
+    </motion.div>
   );
 }

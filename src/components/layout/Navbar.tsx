@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Bell, Menu, X } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { useIsMobile } from '@/hooks/use-mobile';
 
-export function Navbar() {
+interface NavbarProps {
+  onMenuClick?: () => void;
+}
+
+export function Navbar({ onMenuClick }: NavbarProps) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -15,13 +20,9 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <button 
               className="md:hidden p-2 rounded-md hover:bg-muted/50 transition-colors" 
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={onMenuClick}
             >
-              {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              <Menu className="h-5 w-5" />
               <span className="sr-only">Toggle menu</span>
             </button>
             
@@ -34,7 +35,7 @@ export function Navbar() {
           </div>
           
           <div className="flex items-center gap-4">
-            <div className={`relative ${isSearchOpen ? 'w-64' : 'w-9'} transition-all duration-300 ease-in-out`}>
+            <div className={`relative ${isSearchOpen && !isMobile ? 'w-64' : 'w-9'} transition-all duration-300 ease-in-out`}>
               <button 
                 className={`absolute right-0 top-0 flex h-9 w-9 items-center justify-center rounded-md hover:bg-muted/50 transition-colors ${isSearchOpen ? 'bg-muted/50' : ''}`}
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
@@ -46,7 +47,7 @@ export function Navbar() {
               <input 
                 type="search" 
                 placeholder="Search..." 
-                className={`h-9 w-full rounded-md bg-muted px-3 py-1 text-sm outline-none focus:ring-1 focus:ring-primary transition-all duration-300 ${isSearchOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                className={`h-9 w-full rounded-md bg-muted px-3 py-1 text-sm outline-none focus:ring-1 focus:ring-primary transition-all duration-300 ${isSearchOpen && !isMobile ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
               />
             </div>
             
