@@ -22,7 +22,7 @@ export default function Assistant() {
   // Suggested prompts
   const suggestions = [
     'Show me my task summary',
-    'What's my performance this month?',
+    "What's my performance this month?",
     'Show me my financial overview',
     'What meetings do I have today?',
     'How am I doing compared to last month?',
