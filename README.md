@@ -1,69 +1,60 @@
-# Welcome to your Lovable project
+README.md for GitHub Repository
+md
+Copy
+Edit
+# 📊 Interactive Dashboard Pro  
 
-## Project info
+**Interactive Dashboard Pro** is a smart and responsive **data analytics dashboard** built with **KendoReact Free Components**. It enhances **data visualization, real-time AI assistance, and intuitive UI interactions**, making it a perfect solution for professionals and businesses.  
 
-**URL**: https://lovable.dev/projects/577721a0-fa9b-4093-9264-3fb9bc2e8d0e
+## 🚀 Features  
 
-## How can I edit this code?
+✅ **AI-Powered Assistant** – Get intelligent insights and recommendations.  
+✅ **Interactive Data Visualizations** – Dynamic charts, tables, and reports.  
+✅ **Customizable UI** – Modify the design using **ThemeBuilder**.  
+✅ **Optimized Performance** – Built with **Vite, TypeScript, React, Tailwind CSS, and shadcn-ui**.  
+✅ **Team Collaboration** – Manage users, assign tasks, and streamline workflows.  
+✅ **Widgets & Analytics** – Track key performance indicators effortlessly.  
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used  
 
-**Use Lovable**
+- **Vite** – Fast development and optimized builds.  
+- **TypeScript** – Type safety and better development experience.  
+- **React** – Component-driven UI design.  
+- **KendoReact** – Free UI components for seamless experience.  
+- **shadcn-ui** – Modern and clean UI elements.  
+- **Tailwind CSS** – Efficient styling with utility-first approach.  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/577721a0-fa9b-4093-9264-3fb9bc2e8d0e) and start prompting.
+## 📸 Screenshots  
+(Add relevant screenshots showcasing the dashboard UI.)  
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started  
 
-**Use your preferred IDE**
+Follow these simple steps to set up the project on your local machine.  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### **1️⃣ Clone the Repository**  
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+cd interactive-dashboard-pro
+2️⃣ Install Dependencies
+sh
+Copy
+Edit
+npm install
+3️⃣ Start the Development Server
+sh
+Copy
+Edit
 npm run dev
-```
+📌 KendoReact Integration
+This project heavily utilizes KendoReact Free Components, including:
 
-**Edit a file directly in GitHub**
+✅ Grid Component – For structured data presentation.
+✅ Charts & Graphs – For interactive data visualization.
+✅ Buttons & Toolbars – For seamless navigation.
+✅ Forms & Inputs – For a smooth user experience.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🌟 Contributing
+Want to contribute? Fork this repository and submit a pull request!
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/577721a0-fa9b-4093-9264-3fb9bc2e8d0e) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+📜 License
+This project is licensed under the MIT License.
