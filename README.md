@@ -31,7 +31,7 @@ Follow these simple steps to set up the project on your local machine.
 
 ### **1️⃣ Clone the Repository**  
 
-git clone <YOUR_GIT_URL>
+git clone <GIT_URL>
 cd interactive-dashboard-pro
 
 2️⃣ Install Dependencies
