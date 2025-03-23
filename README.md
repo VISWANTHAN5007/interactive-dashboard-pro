@@ -1,7 +1,5 @@
 README.md for GitHub Repository
-md
-Copy
-Edit
+
 # 📊 Interactive Dashboard Pro  
 
 **Interactive Dashboard Pro** is a smart and responsive **data analytics dashboard** built with **KendoReact Free Components**. It enhances **data visualization, real-time AI assistance, and intuitive UI interactions**, making it a perfect solution for professionals and businesses.  
