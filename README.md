@@ -24,28 +24,27 @@ Edit
 - **shadcn-ui** – Modern and clean UI elements.  
 - **Tailwind CSS** – Efficient styling with utility-first approach.  
 
-## 📸 Screenshots  
-(Add relevant screenshots showcasing the dashboard UI.)  
 
 ## 🚀 Getting Started  
 
 Follow these simple steps to set up the project on your local machine.  
 
 ### **1️⃣ Clone the Repository**  
-```sh
+
 git clone <YOUR_GIT_URL>
 cd interactive-dashboard-pro
+
 2️⃣ Install Dependencies
-sh
-Copy
-Edit
-npm install
+
+  npm install
+
 3️⃣ Start the Development Server
-sh
-Copy
-Edit
-npm run dev
+
+  npm run dev
+
+  
 📌 KendoReact Integration
+
 This project heavily utilizes KendoReact Free Components, including:
 
 ✅ Grid Component – For structured data presentation.
